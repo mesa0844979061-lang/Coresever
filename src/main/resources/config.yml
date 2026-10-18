@@ -1,0 +1,37 @@
+# ชื่อโลก PvP ที่สร้างด้วย Multiverse-Core (เช่น /mv create pvp normal)
+pvp-world: pvp
+
+# ให้ดาบท้าดวลตอนเข้าเซิร์ฟ / ตอนเกิดใหม่
+give-sword-on-join: true
+# วัสดุของดาบ
+sword-material: DIAMOND_SWORD
+# วัสดุของดาบปาตี้ดวล (หัวหน้าปาตี้ได้ตอน /party create)
+party-sword-material: NETHERITE_SWORD
+
+# ระบบปาตี้
+party:
+  # จำนวนสมาชิกสูงสุดต่อปาตี้
+  max-size: 8
+  # เวลาที่คำเชิญเข้าปาตี้มีผล (วินาที)
+  invite-expire-seconds: 60
+  # true = ปาตี้ที่ดวลกันต้องมีจำนวนคนเท่ากัน
+  require-equal-size: false
+
+# เวลาที่คำท้ามีผล (วินาที)
+request-expire-seconds: 30
+# นับถอยหลังก่อนเริ่มสู้ (วินาที)
+countdown-seconds: 5
+# เวลาดวลสูงสุด (วินาที) หมดเวลา = เสมอ
+duel-time-seconds: 600
+# หน่วงก่อนวาปกลับหลังจบดวล (tick, 20 = 1 วินาที)
+end-delay-ticks: 80
+# ประกาศผลทั้งเซิร์ฟ
+broadcast-results: true
+# รัศมีเคลียร์ของที่ตก/ลูกธนู/คริสตัล หลังจบดวล
+cleanup-radius: 60
+# คำสั่งที่ใช้ได้ระหว่างดวล (แอดมินใช้ได้ทุกคำสั่ง)
+allowed-commands: [duel, kitduel, kd, party, paty, pt]
+
+# สนามดวล (ตั้งด้วย /duel setspawn <ชื่อ> <1|2> ยืนในโลก pvp)
+# ถ้าไม่ตั้งเลย จะใช้จุดเกิดของโลก pvp แทน (1 สนาม)
+arenas: {}
